@@ -1,7 +1,7 @@
+from defigraph.Vertex import Vertex
+
 class Pool:
-  def __init__(self, address, chainId, token0, token1, liquidity):
+  def __init__(self, address: str, token0: Vertex, token1: Vertex):
     self.address = address
-    self.chainId = chainId
     self.token0 = token0
     self.token1 = token1
-    self.liquidity = liquidity
