@@ -34,10 +34,10 @@ class Graph:
       for edge in edges:
         if edge not in self.adjascency_list[vertex]:
           self.adjascency_list[vertex].append(edge)
-  
+          
   def __len__(self):
     return len(self.vertices)
-  
+
   def add_edge(self, pool: Pool, directed=False):
     """Directed=False means you can trade in any direction between token0 and token1"""
     edge = Edge(pool=pool)
