@@ -1,7 +1,7 @@
+from typing import List, Dict
 from defigraph.Vertex import Vertex
 from defigraph.Edge import Edge
 from defigraph.Pool import Pool
-from typing import List, Dict
 
 class Graph:
   def __init__(self, edges: List[Edge]):

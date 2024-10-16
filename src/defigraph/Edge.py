@@ -1,4 +1,3 @@
-from defigraph.Vertex import Vertex
 from defigraph.Pool import Pool
 from math import log
 
