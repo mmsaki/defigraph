@@ -1,4 +1,7 @@
 import unittest
 
 class TestGraphMethods(unittest.TestCase):
-  """Test class for Graph methods"""
+  pass
+
+if __name__ == "__main__":
+  unittest.main()
