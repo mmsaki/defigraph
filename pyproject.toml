@@ -33,7 +33,7 @@ addopts = [
 dev = ["bumpver", "pytest"]
 
 [tool.bumpver]
-current_version = "0.0.2"
+current_version = "0.1.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "🏷️ bump version {new_version}"
 tag_message = "{new_version}"
