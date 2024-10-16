@@ -20,3 +20,11 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/mmsaki/defigraph"
 Issues = "https://github.com/mmsaki/defigraph/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
+addopts = [
+    "--import-mode=importlib",
+]
