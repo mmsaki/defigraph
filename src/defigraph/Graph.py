@@ -83,7 +83,7 @@ class Graph:
   def get_edges(self):
     edges = []
     for vertex in self.adjascency_list:
-      edges.append(self.adjascency_list[vertex])
+      edges.extend(self.adjascency_list[vertex])
     return edges
   
     
