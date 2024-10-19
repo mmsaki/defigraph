@@ -1,7 +1,11 @@
 from defigraph.Vertex import Vertex
+from web3 import Web3
 
 class Pool:
   def __init__(self, pool_address: str, token0: Vertex, token1: Vertex, fee: int, token0_price: float, token1_price: float):
+    if token1 == token0: raise ValueError("Token0 should not equal Token1")
+    if not Web3.is_checksum_address(pool_address): raise ValueError("Address is not a valud checksum address")
+    if type(token0_price) != float and type(token1_price) != float: raise ValueError(f"Token prices should be of type {float}")
     self.address = pool_address
     self.token0 = token0
     self.token1 = token1
@@ -13,10 +17,10 @@ class Pool:
     return f"{(self.token0, self.token1, self.fee)}"
   
   def __eq__(self, pool):
-    return self.address == pool.address and self.fee == pool.fee and (self.token0 == pool.token0 or self.token0 == pool.token1) and (self.token1 == pool.token1 or self.token1 == pool.token0)
-
+    return self.address == pool.address
+  
   def __ne__(self, pool):
-    return self.address != pool.address or self.fee != pool.fee
+    return self.address != pool.address
   
   def __hash__(self):
     return hash(str(self))
