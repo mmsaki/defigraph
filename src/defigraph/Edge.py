@@ -18,3 +18,7 @@ class Edge:
 
   def __iter__(self):
     return (i for i in self._tuple)
+  
+  def __getitem__(self, index):
+    return self._tuple[index]
+  
