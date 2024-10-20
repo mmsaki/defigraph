@@ -1,0 +1,29 @@
+site_name: Defi Graph
+
+copyright: "Copyright &copy; 2024 Meek Msaki All rights reserved."
+author: Meek Msaki
+
+docs_dir: "docs"
+site_url: "https://github.com/mmsaki/defigraph/"
+
+repo_name: "GitHub"
+repo_url: "https://github.com/mmsaki/defigraph/"
+edit_uri: "blob/main/docs/"
+edit_uri_template: "blob/master/docs/{path}"
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+language: en
+
+share:
+  twitter_params: "&via=msakiart&related=msakiart&hashtags=defigraph"
+
+nav:
+  - Home: index.md
+  - Example: notebooks/graph.ipynb
+theme: lantana
+
+plugins:
+  - mkdocs-jupyter
