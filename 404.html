@@ -1,0 +1,179 @@
+
+<!DOCTYPE html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/mmsaki/defigraph/css/bootstrap.min.css">
+  
+
+  
+    <meta http-equiv="content-language" content="en">
+  
+  
+
+  
+  <title>Defi Graph</title>
+  
+
+  
+
+  <link rel="stylesheet" href="/mmsaki/defigraph/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/mmsaki/defigraph/css/default.min.css">
+  <link rel="stylesheet" href="/mmsaki/defigraph/css/vs.min.css">
+  <link rel="stylesheet" href="/mmsaki/defigraph/css/theme.css">
+  
+  
+  
+  <script async>var base_url = '/mmsaki/defigraph/';</script>
+  <script src="/mmsaki/defigraph/js/jquery-3.6.1.slim.min.js"></script>
+  <script src="/mmsaki/defigraph/js/bootstrap.bundle.min.js"></script>
+  <script async src="/mmsaki/defigraph/js/highlight.min.js"></script>
+
+  
+  
+</head>
+<body>
+  
+  
+    
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-3 ">
+        <div class="container">
+            <a class="navbar-brand text-body" asp-area="" href="/">
+              
+              
+                Defi Graph
+              
+            </a>
+            <div class="print-hide">
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="d-none d-md-flex input-group mb-3">
+                
+                    <input class="form-control" type="search" id="searchbox" accesskey="/" placeholder="Defi Graphで検索" aria-label="検索" aria-describedby="search-btn"/>
+                    <button class="btn btn-outline-secondary" type="button" id="search-btn" onclick="search(false);">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar border-bottom box-shadow mb-3 d-md-none print-hide">
+      <div class="container">
+          <div class="navbar-collapse d-flex">
+            <p>
+              <div class="d-flex input-group mb-3">
+                
+                <button class="btn btn-outline-secondary" onclick="toggle_nav(this);" type="button" data-bs-toggle="collapse" data-bs-target="#nav" title="ナビゲーションを表示"><i class="bi bi-book"></i></button>
+                
+                
+                
+                
+                
+            </div>
+            </p>
+          </div>
+      </div>
+    </nav>
+  </header>
+    
+  
+  
+  
+  <div class="container">
+    <main role="main" class="pb-3">
+      <div class="row">
+        
+        
+    
+    <div class="col-12 col-md-2 print-hide">
+      <div class="collapse d-md-block text-nowrap" id="nav"  style="overflow-x:scroll;">
+        <ul class="list-group list-group-flush">
+        
+        
+        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/mmsaki/defigraph/.">Home</a></li>
+        
+        
+        
+        <li class="list-group-item"><a class="text-decoration-none  text-muted" href="/mmsaki/defigraph/notebooks/graph/">Tutorial</a></li>
+        
+        
+      </ul>
+      </div>
+    </div>
+    
+       
+<div class="col-12 col-md-8">
+  <p class="text-center display-3 text-primary"><i class="bi bi-cloud-sleet"></i></p>
+  <p class="text-center display-4">404 Not Found</p>
+  <p>お探しのページは見つかりませんでした。次のいずれかが原因の可能性があります。</p>
+  <ul>
+    <li>サイトは一時的にメンテナンス中である</li>
+    <li>この記事は移動もしくは削除された</li>
+  </ul>
+  <p class="d-md-flex d-none">画面左側の記事一覧および右上の検索ボックスより、記事をお探しいただけます。</p>
+  <p class="d-md-none">画面上部の「<i class="bi bi-book"></i>」アイコンをクリックすることで、記事をお探しいただけます。</p>
+</div> 
+
+      </div>
+      </div>
+      <script src="/mmsaki/defigraph/js/theme.js"></script>
+      
+      
+      
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+      
+    </main>
+  </div>
+  
+  
+  
+  
+  
+  <footer class="border-top footer text-muted .position-absolute.bottom-0.start-50.translate-middle-x" style="padding-top:15px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          
+          <p>Copyright &copy; 2024 Meek Msaki All rights reserved.</p>
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  
+  
+
+<div class="modal fade" id="searchModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg print-hide">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">検索</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+          <input id="mkdocs-search-query" type="text" class="form-control" aria-label="検索" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div id="mkdocs-search-results">
+          キーワードを入力して検索を始めましょう
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
