@@ -1,6 +1,6 @@
 # Defi Graph
 
-![GitHub](https://img.shields.io/github/license/mmsaki/defigraph)
+![test](https://github.com/mmsaki/defigraph/actions/workflows/test.yml/badge.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mmsaki/defigraph)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mmsaki/defigraph)
 ![PyPI - Version](https://img.shields.io/pypi/v/defigraph)
@@ -10,6 +10,18 @@
 ![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/msakiart)
 
 This is package for creating and visualizing graphs in DeFi protocols.
+
+## Install
+
+Install using pip or uv
+
+```sh
+pip install defigraph
+
+# or using uv
+
+uv add defigraph
+```
 
 ## Modules
 
