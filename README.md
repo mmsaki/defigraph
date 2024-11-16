@@ -11,6 +11,8 @@
 
 This is package for creating and visualizing graphs in DeFi protocols.
 
+![](./docs/imgs/output.png)
+
 ## Install
 
 Install using pip or uv
@@ -89,3 +91,7 @@ Run tests:
 ```sh
 pytest
 ```
+
+## Usage
+
+See example in [docs/notebooks/graph.ipynb](./docs/notebooks/graph.ipynb)
