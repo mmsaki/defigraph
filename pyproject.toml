@@ -8,13 +8,21 @@ version = "0.1.1"
 authors = [{ name = "Meek Msaki", email = "meek.dev3@gmail.com" }]
 description = "A package for creating a directed graphs based on DeFi protocols"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = ["pytest>=8.3.3", "ruff>=0.7.4", "web3>=7.5.0"]
+dependencies = [
+    "ipykernel>=6.29.5",
+    "load-dotenv>=0.1.0",
+    "matplotlib>=3.7.5",
+    "networkx>=3.4",
+    "pytest>=8.3.3",
+    "ruff>=0.7.4",
+    "web3>=7.5.0",
+]
 
 [project.urls]
 Homepage = "https://github.com/mmsaki/defigraph"
