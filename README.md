@@ -11,7 +11,7 @@
 
 This is package for creating and visualizing graphs in DeFi protocols.
 
-![](./docs/imgs/output.png)
+![Token Graph](./docs/imgs/output.png)
 
 ## Install
 
