@@ -25,10 +25,10 @@ class Graph:
     def __repr__(self) -> str:
         return f"{self.adjascency_list}"
 
-    def __getitem__(self, vertex: str) -> List[Edge]:
+    def __getitem__(self, vertex: Vertex) -> List[Edge]:
         return self.adjascency_list[vertex]
 
-    def __setitem__(self, vertex: str, edges: List[Vertex]) -> None:
+    def __setitem__(self, vertex: Vertex, edges: List[Edge]) -> None:
         if vertex not in self.adjascency_list:
             self.adjascency_list[vertex] = edges
         else:
