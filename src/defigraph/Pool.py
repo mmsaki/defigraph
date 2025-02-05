@@ -1,5 +1,6 @@
-from defigraph.Vertex import Vertex
+from .Vertex import Vertex
 from web3 import Web3
+from decimal import Decimal
 
 
 class Pool:

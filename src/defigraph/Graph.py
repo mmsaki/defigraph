@@ -1,7 +1,7 @@
 from typing import List, Dict
-from defigraph.Vertex import Vertex
-from defigraph.Edge import Edge
-from defigraph.Pool import Pool
+from .Vertex import Vertex
+from .Edge import Edge
+from .Pool import Pool
 
 
 class Graph:
