@@ -25,6 +25,33 @@ pip install defigraph
 uv add defigraph
 ```
 
+## Development
+
+Install [uv package manger](https://docs.astral.sh/uv/):
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Clone project
+
+```sh
+git clone https://github.com/mmsaki/defigraph.git
+```
+
+Create virtual environment, and activate
+
+```sh
+uv venv;
+source .venv/bin/activate;
+```
+
+Install dependencies
+
+```sh
+uv sync
+```
+
 ## Modules
 
 - [x] [Edge](#edge-type) - describes a path between tokens
@@ -37,12 +64,12 @@ uv add defigraph
 Edges store two main state:
 
 1. `self.weight` - a weight between two tokens
-   - typeof `float`
+   - typeof `Decimal`
    - `{0,1}` Depends on direction of edge
    - Calculated as `-Math.log(self.pool.token_price_{0,1})`
-1. `self.pool` - an instance of a token pool
+2. `self.pool` - an instance of a token pool
    - typeof `Pool`
-1. `self._tuple` - Allows indexing/iteration of the edge object
+3. `self._tuple` - Allows indexing/iteration of the edge object
    - typeof `iter`
    - Array of `[Vertex1, Vertex2, (self.weight, Pool)]`
 
@@ -52,15 +79,15 @@ A pool object describing tokens:
 
 1. `self.address` - the address of the pool
    - typeof `Hex` checksum address
-1. `self.token0` - a token described as a vertex
+2. `self.token0` - a token described as a vertex
    - typeof `Vertex`
-1. `self.token1` - a token described as a vertex
+3. `self.token1` - a token described as a vertex
    - typeof `Vertex`
-1. `self.token0_price` - the price of token0
-   - typeof `float`
-1. `self.token1_price` - the price of token1
-   - typeof `float
-1. `self.fee` - describes the pool fee e.g Uniswap (100 | 500 | 1000 | 3000)
+4. `self.token0_price` - the price of token0
+   - typeof `Decimal`
+5. `self.token1_price` - the price of token1
+   - typeof `Decimal`
+6. `self.fee` - describes the pool fee e.g Uniswap (100 | 500 | 1000 | 3000)
    - typeof `int`
 
 ## Graph type
@@ -69,7 +96,7 @@ An adjacency list graph object desribing a defi market
 
 1. `self.vertices` - contains a list of all vertices
    - typeof `List[Vertex]`
-1. `self.adjascency_list` - a mapping describing edges in the graph
+2. `self.adjascency_list` - a mapping describing edges in the graph
    - typeof `Dict[Vertex, List[Edge]]`
    - example: {Vertex: [Edge1, Edge2, Edge3, Edge4]}
 
@@ -79,19 +106,19 @@ A node on the graph describing a token
 
 1. `self.name` - name of the token
    - typeof `string`
-1. `self.decimals` - number of decimals for token
+2. `self.decimals` - number of decimals for token
    - typeof `int`
-1. `self.address` - address of token
+3. `self.address` - address of token
    - typeof `Hex` checksum address
 
 ## Tests
 
-Run tests:
+Run tests using pytest watcher:
 
 ```sh
-pytest
+ptw .
 ```
 
-## Usage
+## Example
 
 See example in [docs/notebooks/graph.ipynb](./docs/notebooks/graph.ipynb)
