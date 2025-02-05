@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "defigraph"
-version = "0.1.1"
+version = "0.1.2"
 authors = [{ name = "Meek Msaki", email = "meek.dev3@gmail.com" }]
 description = "A package for creating a directed graphs based on DeFi protocols"
 readme = "README.md"
