@@ -3,10 +3,6 @@ from web3 import Web3
 
 class Vertex:
     def __init__(self, name: str, decimals: int, address: str):
-        if not isinstance(decimals, int):
-            raise TypeError(
-                f"Decimals should be type {int} but receved {type(decimals)}"
-            )
         if not Web3.is_checksum_address(address):
             raise ValueError(f"Expected checksum address but received {address}")
 

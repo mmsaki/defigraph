@@ -10,19 +10,14 @@ class Pool:
         token0: Vertex,
         token1: Vertex,
         fee: int,
-        token0_price: float,
-        token1_price: float,
+        token0_price: Decimal,
+        token1_price: Decimal,
     ):
         if token1 == token0:
             raise ValueError("Token0 should not equal Token1")
         if not Web3.is_checksum_address(pool_address):
             raise ValueError("Address is not a valid checksum address")
 
-        type_toke0 = isinstance(token0_price, float)
-        type_toke1 = isinstance(token1_price, float)
-
-        if not type_toke0 and not type_toke1:
-            raise ValueError(f"Token prices should be of type {float}")
         self.address = pool_address
         self.token0 = token0
         self.token1 = token1
