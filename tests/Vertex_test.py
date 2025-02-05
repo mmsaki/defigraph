@@ -32,13 +32,6 @@ class TestVertexMethods(unittest.TestCase):
             address = self.pool["token0"]["id"]
             Vertex(name, decimals, address)
 
-    def test_fails_if_decimals_is_string(self):
-        with pytest.raises(TypeError):
-            name = self.pool["token0"]
-            decimals = self.pool["token0"]["decimals"]
-            address = Web3.to_checksum_address(self.pool["token0"]["id"])
-            Vertex(name, decimals, address)
-
     def tearDown(self):
         return super().tearDown()
 

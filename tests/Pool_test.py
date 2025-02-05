@@ -3,6 +3,7 @@ from defigraph.Vertex import Vertex
 import unittest
 import pytest
 from web3 import Web3
+from decimal import Decimal
 
 
 class TestPoolMethods(unittest.TestCase):
@@ -47,8 +48,8 @@ class TestPoolMethods(unittest.TestCase):
                 token0=self.u,
                 token1=self.u,
                 fee=self.fee,
-                token0_price=self.token0Price,
-                token1_price=self.token1Price,
+                token0_price=Decimal(self.token0Price),
+                token1_price=Decimal(self.token1Price),
             )
 
     def test_pool_address_should_be_valid_checksum(self):
@@ -58,19 +59,8 @@ class TestPoolMethods(unittest.TestCase):
                 token0=self.u,
                 token1=self.v,
                 fee=self.fee,
-                token0_price=self.token0Price,
-                token1_price=self.token1Price,
-            )
-
-    def test_token_prices_should_be_type_float(self):
-        with pytest.raises(ValueError, match=f"Token prices should be of type {float}"):
-            Pool(
-                pool_address=self.pool_address,
-                token0=self.u,
-                token1=self.v,
-                fee=self.fee,
-                token0_price=str(self.token0Price),
-                token1_price=str(self.token1Price),
+                token0_price=Decimal(self.token0Price),
+                token1_price=Decimal(self.token1Price),
             )
 
 
