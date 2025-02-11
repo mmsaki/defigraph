@@ -5,7 +5,7 @@ from .Pool import Pool
 
 
 class Graph:
-    def __init__(self, edges: List[Edge]) -> None:
+    def __init__(self, edges: List[Edge] = []) -> None:
         self.vertices: List[Vertex] = []
         self.adjascency_list: Dict[Vertex, List[Edge]] = {}
 
