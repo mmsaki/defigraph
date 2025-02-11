@@ -1,4 +1,5 @@
 import unittest
+
 from defigraph.Vertex import Vertex
 import pytest
 from web3 import Web3
@@ -26,11 +27,13 @@ class TestVertexMethods(unittest.TestCase):
         }
 
     def test_address_should_be_valid_checksum(self):
+        name = self.pool["token0"]
+        decimals = int(self.pool["token0"]["decimals"])
+        address = self.pool["token0"]["id"]  # should be checksum address
         with pytest.raises(ValueError):
-            name = self.pool["token0"]
-            decimals = int(self.pool["token0"]["decimals"])
-            address = self.pool["token0"]["id"]
             Vertex(name, decimals, address)
+
+        Vertex(name, decimals, Web3.to_checksum_address(address))
 
     def tearDown(self):
         return super().tearDown()
